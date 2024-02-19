@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="./p5.js"></script>
+    <script src="./p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <ul id="sessionId" style="display: none;"></ul>
+    <ul id="matchStatus" style="display: none;">waiting</ul>
+    <ul id="events"></ul>
+    <form id="chat-form" class="chat-form">
+      <input id="chat-input" autocomplete="off" title="chat" />
+      <button>Send</button>
+    </form>
+    <!-- <img src = './assets/sticky.jpeg' style="height: 0.2"> -->
+    <button id="join-match-button" class="join-match-button" style="margin-top: 25px; margin-left: 25px;">Join chat</button>
+
+    <script src="utils.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="p5.gif.min.js"></script>
+    <script src="sketch.js"></script>
+    <script src="objects/Chat.js"></script>
+    <script src="objects/Bullet.js"></script>
+    <script src="objects/NamePlate.js"></script>
+    <script src="objects/Player.js"></script>
+    <script src="objects/Zombie.js"></script>
+    
+    <!-- <script src="style.css"></script> -->
+    <div id="display-warnings" class="events" style="margin-left: 10px;"></div>
+    <div id="users-count" class="users-count" style="text-align: center; margin-top: 50px; margin-right: 10px;"></div>
+    <div class="dot-flashing"></div>
+    <script src="client.js"></script>
+  </body>
+</html>
