@@ -74,7 +74,6 @@ io.on('connection', (sock) => {
             msg: `Joined Sticky chat`
         })));
         io.emit('startMatch', newServerMsg({
-        // sock.emit('startMatch', newServerMsg({
             'playersDict': playersDict
         }));
         playersSockets = [];
@@ -84,35 +83,6 @@ io.on('connection', (sock) => {
     sock.on('message', async (text) => {
         io.emit('message', newServerMsg(text));
         console.log(`\n***** Chat message: ${JSON.stringify(text.msg)} *****\n`);
-
-        const get = 'GET';
-        const post = 'POST';
-        // const url = 'localhost:4567';
-        const url = 'http://0.0.0.0:4567/users';
-        const url2 = 'http://0.0.0.0:4567/chats/';
-        const url3 = 'http://localhost:4567/api/v3/chats/';
-        const url4 = `https://try.nodebb.org/api/v3/chats/`;
-        const data = {
-            // "uids": [
-            //     2
-            // ]
-        };
-        const headers = undefined;
-
-        // const loginAttempt = await login('lucas@getstic.ky', 'test@123');
-
-        // const response = await axios({ method: get, url, data: undefined, headers });
-        // const response = await axios({ method: get, url: url4, data: undefined, headers });
-            // .then(response => {
-            //     console.log(`\n***** Axios response: *****\n`);
-            //     console.log(response.data);
-            // })
-            // .catch(error => {
-            //     console.log(`\n***** Axios ERROR: *****\n`);
-            //     console.error('Error:', error);
-            // });
-        
-        // console.log(response);
     })
 
     sock.on('typing', (json) => {
